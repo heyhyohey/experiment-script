@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+wrmsr -a 0x1a4 0xf
