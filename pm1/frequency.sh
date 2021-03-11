@@ -1,6 +1,6 @@
 #!/bin/zsh
 
 for n in {0..39}; do
-	echo 2500000 > /sys/devices/system/cpu/cpu$n/cpufreq/scaling_max_freq
+	echo 2400000 > /sys/devices/system/cpu/cpu$n/cpufreq/scaling_max_freq
 	cat /sys/devices/system/cpu/cpu$n/cpufreq/scaling_max_freq
 done
