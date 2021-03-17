@@ -1,7 +1,9 @@
 #!/bin/zsh
 
-for i in {26..36}; do
-	echo task=3,op=1,access_size=256,stride_size=256,parallel=${i},runtime=10 > /proc/lattester
+access_size=64
+
+for i in {6..21}; do
+	echo task=4,op=0,access_size=${access_size},parallel=14,runtime=10 > /proc/lattester
 
 	result=0
 	cnt=0
@@ -15,6 +17,8 @@ for i in {26..36}; do
 	done
 
 	result=`expr $result / $cnt`
-	echo $result >> ~/256_sequential_threads_store.txt
+	echo $result >> ~/access_size_load.txt
 	sleep 1s
+	echo $access_size
+	access_size=`expr $access_size * 2`
 done
