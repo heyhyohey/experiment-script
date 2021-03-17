@@ -15,6 +15,6 @@ for i in {1..25}; do
 	done
 
 	result=`expr $result / $cnt`
-	echo $result >> ~/result.threads.txt
+	echo $result >> ~/256_sequential_threads.txt
 	sleep 1s
 done
