@@ -20,5 +20,5 @@ for i in {6..21}; do
 	echo $result >> ~/access_size_load.txt
 	sleep 1s
 	echo $access_size
-	access_size=`expr $access_size * 2`
+	access_size=`expr $access_size \* 2`
 done
