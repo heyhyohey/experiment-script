@@ -12,5 +12,6 @@ for i in {1..25}; do
 
 	result=`expr $result / 10`
 	echo $result >> ~/result.threads.txt
+	sleep 1s
 done
 
